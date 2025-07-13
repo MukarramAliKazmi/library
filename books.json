@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "numberOfPages": 476,
+    "isRead": true,
+    "imageURL": "./img/pride-and-prejudice.jpg"
+  },
+  {
+    "title": "A Clockwork Orange",
+    "author": "Anthony Burgess",
+    "numberOfPages": 240,
+    "isRead": true,
+    "imageURL": "./img/a-clockwork-orange.webp"
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "numberOfPages": 528,
+    "isRead": false,
+    "imageURL": "./img/the-grapes-of-wrath.jpg"
+  },
+  {
+    "title": "American Psycho",
+    "author": "Bret Easton Ellis",
+    "numberOfPages": 399,
+    "isRead": true,
+    "imageURL": "./img/american-psycho.jpg"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "numberOfPages": 300,
+    "isRead": true,
+    "imageURL": "./img/brave-new-world.jpg"
+  },
+  {
+    "title": "Animorphs - The Stranger",
+    "author": "K. A. Applegate",
+    "numberOfPages": 176,
+    "isRead": false,
+    "imageURL": "./img/animorphs-the-stranger.webp"
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "numberOfPages": 256,
+    "isRead": false,
+    "imageURL": "./img/fahrenheit-451.webp"
+  },
+  {
+    "title": "When You Are Engulfed in Flames",
+    "author": "David Sedaris",
+    "numberOfPages": 323,
+    "isRead": true,
+    "imageURL": "./img/when-you-are-engulfed-in-flames.webp"
+  },
+  {
+    "title": "Face of an Angel",
+    "author": "Dorothy Eden",
+    "numberOfPages": 480,
+    "isRead": true,
+    "imageURL": "./img/face-of-an-angel.jpg"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J. D. Salinger",
+    "numberOfPages": 277,
+    "isRead": false,
+    "imageURL": "./img/the-catcher-in-the-rye.webp"
+  }
+]
