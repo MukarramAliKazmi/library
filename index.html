@@ -9,7 +9,7 @@
 <body>
   <div id="page-header">
     <h1 id="page-heading">Library</h1>
-    <button onclick="openDialog()" class="btn">
+    <button onclick="utils.openDialog()" class="btn">
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="btn-icon">
         <path d="M9 1.5V16.5M16.5 9H1.5" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
@@ -19,40 +19,40 @@
   <dialog id="dialog">
     <div class="dialog-header">
       <h1 class="dialog-heading">Add Book</h1>
-      <button onclick="closeDialog()" class="close-dialog-button">
+      <button onclick="utils.closeDialog()" class="close-dialog-button">
         <svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-dialog-icon">
           <path d="M1 16L15 1M1 1L15 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
     </div>
-    <form id="book-form" class="form" onsubmit="(event) => addBook(event)">
+    <form id="book-form" class="form" onsubmit="(event) => events.addBook(event)">
       <div class="form-field">
-        <label class="input-label">Title</label>
-        <input class="input" type="text" name="title" placeholder="Title" required />
-      </div>
-      
-      <div class="form-field">
-        <label class="input-label">Author</label>
-        <input class="input" type="text" name="author" placeholder="Author" required />
+        <label for="title" class="input-label">Title</label>
+        <input id="title" class="input" type="text" name="title" placeholder="Title" required />
       </div>
 
       <div class="form-field">
-        <label class="input-label">Number Of Pages</label>
-        <input class="input" type="number" min="0" name="numberOfPages" placeholder="Number of pages" required />
+        <label for="author" class="input-label">Author</label>
+        <input id="author" class="input" type="text" name="author" placeholder="Author" required />
       </div>
 
       <div class="form-field">
-        <label class="input-label">Image</label>
-        <input class="input" type="url" name="imageURL" placeholder="Image URL" required />
+        <label for="number-of-pages" class="input-label">Number Of Pages</label>
+        <input id="number-of-pages" class="input" type="number" min="0" name="numberOfPages" placeholder="Number of pages" required />
+      </div>
+
+      <div class="form-field">
+        <label for="image-url" class="input-label">Image</label>
+        <input id="image-url" class="input" type="url" name="imageURL" placeholder="Image URL" required />
       </div>
 
       <div class="form-checkbox-field">
-        <input class="checkbox" type="checkbox" name="isRead" />
-        <label class="input-label">Is Read?</label>
+        <input id="is-read" class="checkbox" type="checkbox" name="isRead" />
+        <label for="is-read" class="input-label">Is Read?</label>
       </div>
 
       <div class="form-actions">
-        <button type="button" onclick="closeDialog()" class="btn btn-secondary">Cancel</button>
+        <button type="button" onclick="utils.closeDialog()" class="btn btn-secondary">Cancel</button>
         <button type="submit" class="btn">Save</button>
       </div>
     </form>
