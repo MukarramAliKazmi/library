@@ -1,51 +1,49 @@
-function Book(
-  title,
-  author,
-  numberOfPages,
-  isRead,
-  imageURL
-) {
-  if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");
+class Book {
+  constructor(
+    title,
+    author,
+    numberOfPages,
+    isRead,
+    imageURL
+  ) {
+    this.id            = crypto.randomUUID();
+    this.title         = title;
+    this.author        = author;
+    this.numberOfPages = numberOfPages;
+    this.isRead        = isRead;
+    this.imageURL      = imageURL;
   }
-  this.id            = crypto.randomUUID();
-  this.title         = title;
-  this.author        = author;
-  this.numberOfPages = numberOfPages;
-  this.isRead        = isRead;
-  this.imageURL      = imageURL;
-}
 
-Book.prototype.toggleIsRead = function() {
-  this.isRead = !this.isRead;
-}
-
-function Library() {
-  if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");
+  toggleIsRead() {
+    this.isRead = !this.isRead;
   }
-  this.books = [];
 }
 
-Library.prototype.addBook = function(book) {
-  if (!(book instanceof Book)) {
-    throw Error("Book must be an instance of Book constructor");
+class Library {
+  constructor() {
+    this.books = [];
   }
-  this.books.push(book);
-}
 
-Library.prototype.findBook = function(id) {
-  return this.books.find(book => book.id === id);
-}
+  addBook(book) {
+    if (!(book instanceof Book)) {
+      throw Error("Book must be an instance of the Book class");
+    }
+    this.books.push(book);
+  }
 
-Library.prototype.findBookIndex = function(id) {
-  return this.books.findIndex(book => book.id === id);
-}
+  findBook(id) {
+    return this.books.find(book => book.id === id);
+  }
 
-Library.prototype.removeBook = function(id) {
-  const index = this.findBookIndex(id);
-  if (index !== -1) {
-    this.books.splice(index, 1);
+  findBookIndex(id) {
+    return this.books.findIndex(book => book.id === id);
+  }
+
+  removeBook(id) {
+    const index = this.findBookIndex(id);
+    if (index !== -1) {
+      this.books.splice(index, 1);
+    }
   }
 }
 
